@@ -8,13 +8,13 @@
     - tmux
     - icedtea-netx
 
-
 - name: Make sure snapd is running
   systemd:
     state: started
     name: snapd
 
-- name: Install snap packages
+- name" snap packages
   snap:
     name:
-      - remmina
+      - remnina
+      
