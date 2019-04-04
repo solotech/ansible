@@ -1,10 +1,13 @@
 - name: Install apt packages
-  apt: name={{item}}
-  with_items:
+  apt: 
+    name: "{{ packages }}"
+  vars:
+    packages:
     - snapd
     - htop
     - tmux
     - icedtea-netx
+
 
 - name: Make sure snapd is running
   systemd:
