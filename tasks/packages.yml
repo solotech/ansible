@@ -13,7 +13,7 @@
     state: started
     name: snapd
 
-- name" snap packages
+- name: snap packages
   snap:
     name:
       - remnina
