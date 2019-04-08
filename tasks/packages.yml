@@ -1,3 +1,7 @@
+- name: Add remmina apt repo
+  apt_repository:
+    repo: ppa:remmina-ppa-team/remmina-next
+
 - name: Install apt packages
   apt: 
     name: "{{ packages }}"
@@ -7,14 +11,12 @@
     - htop
     - tmux
     - icedtea-netx
+    - remmina 
+    - remmina-plugin-rdp 
+    - remmina-plugin-secret 
+    - remmina-plugin-spice
 
 - name: Make sure snapd is running
   systemd:
     state: started
     name: snapd
-
-- name: snap packages
-  snap:
-    name:
-      - remnina
-      
