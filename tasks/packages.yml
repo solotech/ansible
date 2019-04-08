@@ -2,10 +2,12 @@
   apt_repository:
     repo: ppa:remmina-ppa-team/remmina-next
 
-- name: Add signal key / repo
+- name: Add signal key
   apt_key:
     url: https://updates.signal.org/desktop/apt/keys.asc
     state: present
+    
+- name: Add signal repo
   apt_repository:
     repo: deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
     state: present
