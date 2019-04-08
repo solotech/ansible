@@ -2,6 +2,14 @@
   apt_repository:
     repo: ppa:remmina-ppa-team/remmina-next
 
+- name: Add signal key / repo
+  apt_key:
+    url: https://updates.signal.org/desktop/apt/keys.asc
+    state: present
+  apt_repository:
+    repo: deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
+    state: present
+
 - name: Install apt packages
   apt: 
     name: "{{ packages }}"
@@ -17,6 +25,7 @@
     - remmina-plugin-secret 
     - remmina-plugin-spice
     - thunderbird
+    - signal-desktop
 
 - name: Make sure snapd is running
   systemd:
