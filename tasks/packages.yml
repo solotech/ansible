@@ -19,6 +19,7 @@
     packages:
     - snapd
     - htop
+    - libreoffice
     - tmux
     - icedtea-netx
     - mesa-utils
