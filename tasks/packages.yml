@@ -29,6 +29,7 @@
     - remmina-plugin-spice
     - thunderbird
     - signal-desktop
+    - steam-installer
 
 - name: Make sure snapd is running
   systemd:
