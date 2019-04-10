@@ -1,2 +1,3 @@
 - name: Set Theme to Breezedark
   shell: lookandfeeltool -a 'org.kde.breezedark.desktop'
+  warn: False
