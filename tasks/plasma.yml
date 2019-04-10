@@ -1,2 +1,2 @@
 - name: Set Theme to Breezedark
-  shell: runuser -l jsolomon -c 'lookandfeeltool -a 'org.kde.breezedark.desktop''
+  shell: lookandfeeltool -a 'org.kde.breezedark.desktop'
