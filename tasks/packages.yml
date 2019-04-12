@@ -31,6 +31,7 @@
     - tlp
     - signal-desktop
     - steam-installer
+    - freerdp-x11
 
 - name: Make sure snapd is running
   systemd:
