@@ -12,11 +12,22 @@
     repo: deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
     state: present
 
+- name: Add vscode key
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+
+- name: Add vscode repo
+  apt_repository:
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+    state: present
+
 - name: Install apt packages
   apt: 
     name: "{{ packages }}"
   vars:
     packages:
+    - code
     - snapd
     - htop
     - libreoffice
