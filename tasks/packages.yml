@@ -54,6 +54,7 @@
     - steam-installer
     - freerdp-x11
     - google-chrome-stable
+    - keepassxc
 
 - name: Make sure snapd is running
   systemd:
