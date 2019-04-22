@@ -22,6 +22,16 @@
     repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present
 
+- name: Add chrome key
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    state: present
+
+- name: Add chome repo
+  apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+
 - name: Install apt packages
   apt: 
     name: "{{ packages }}"
@@ -43,6 +53,7 @@
     - signal-desktop
     - steam-installer
     - freerdp-x11
+    - google-chrome-stable
 
 - name: Make sure snapd is running
   systemd:
