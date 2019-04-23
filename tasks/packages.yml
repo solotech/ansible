@@ -56,7 +56,7 @@
     - google-chrome-stable
     - keepassxc
     - inkscape
-    - cifs-tools
+    - cifs-utils
 
 - name: Make sure snapd is running
   systemd:
