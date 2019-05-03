@@ -57,6 +57,7 @@
     - keepassxc
     - inkscape
     - cifs-utils
+    - gvfs
 
 - name: Make sure snapd is running
   systemd:
