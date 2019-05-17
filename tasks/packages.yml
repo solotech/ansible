@@ -58,6 +58,7 @@
     - inkscape
     - cifs-utils
     - gvfs
+    - shutter
 
 - name: Make sure snapd is running
   systemd:
