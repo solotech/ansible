@@ -59,6 +59,7 @@
     - cifs-utils
     - gvfs
     - shutter
+    - libgoo-canvas-perl
 
 - name: Make sure snapd is running
   systemd:
