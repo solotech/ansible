@@ -58,6 +58,7 @@
     - inkscape
     - cifs-utils
     - gvfs
+    - openvpn
 
 - name: Make sure snapd is running
   systemd:
