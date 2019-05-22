@@ -59,6 +59,7 @@
     - cifs-utils
     - gvfs
     - openvpn
+    - networkmanager-openvpn
 
 - name: Make sure snapd is running
   systemd:
