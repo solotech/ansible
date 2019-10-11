@@ -1,9 +1,3 @@
-- name: Add remmina apt repo
-  apt_repository:
-    repo: ppa:remmina-ppa-team/remmina-next
-
-
-
 - name: Add chrome key
   apt_key:
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
@@ -11,7 +5,8 @@
 
 - name: Add chome repo
   apt_repository:
-    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+    filename: "google-chrome"
     state: present
 
 - name: Install apt packages
@@ -25,30 +20,26 @@
     - tmux
     - icedtea-netx
     - mesa-utils
-    #- remmina 
-    #- remmina-plugin-rdp 
-    #- remmina-plugin-secret 
-    #- remmina-plugin-spice
-    - thunderbird
     - tlp
     - steam-installer
-    - freerdp-x11
     - google-chrome-stable
-    - keepassxc
-    - inkscape
-    - cifs-utils
-    - gvfs
+    ##- cifs-utils
+    ##- gvfs
 
 - name: Install snap packages
   snap:
     name:
       - signal-desktop
       - remmina
+      - keepassxc
+      - inkscape
       
 - name: Install code with option --classic
   snap:
-    name: code
     classic: yes
+    name:
+      - code
+      - skype
 
 - name: Make sure snapd is running
   systemd:
