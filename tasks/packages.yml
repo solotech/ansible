@@ -57,8 +57,6 @@
     - inkscape
     - cifs-utils
     - gvfs
-    - openvpn
-    - networkmanager-openvpn
 
 - name: Install snap packages
   snap:
