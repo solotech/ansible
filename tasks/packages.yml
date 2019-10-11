@@ -50,7 +50,6 @@
     - remmina-plugin-spice
     - thunderbird
     - tlp
-    - signal-desktop
     - steam-installer
     - freerdp-x11
     - google-chrome-stable
@@ -60,6 +59,11 @@
     - gvfs
     - openvpn
     - networkmanager-openvpn
+
+- name: Install snap packages
+  snap:
+    name:
+      - signal-desktop
 
 - name: Make sure snapd is running
   systemd:
