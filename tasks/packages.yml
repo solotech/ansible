@@ -2,25 +2,7 @@
   apt_repository:
     repo: ppa:remmina-ppa-team/remmina-next
 
-- name: Add signal key
-  apt_key:
-    url: https://updates.signal.org/desktop/apt/keys.asc
-    state: present
-    
-- name: Add signal repo
-  apt_repository:
-    repo: deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
-    state: present
 
-- name: Add vscode key
-  apt_key:
-    url: https://packages.microsoft.com/keys/microsoft.asc
-    state: present
-
-- name: Add vscode repo
-  apt_repository:
-    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
-    state: present
 
 - name: Add chrome key
   apt_key:
@@ -37,17 +19,16 @@
     name: "{{ packages }}"
   vars:
     packages:
-    - code
     - snapd
     - htop
     - libreoffice
     - tmux
     - icedtea-netx
     - mesa-utils
-    - remmina 
-    - remmina-plugin-rdp 
-    - remmina-plugin-secret 
-    - remmina-plugin-spice
+    #- remmina 
+    #- remmina-plugin-rdp 
+    #- remmina-plugin-secret 
+    #- remmina-plugin-spice
     - thunderbird
     - tlp
     - steam-installer
@@ -62,6 +43,12 @@
   snap:
     name:
       - signal-desktop
+      - remmina
+      
+- name: Install code packages with option --classic
+  snap:
+    name: code
+    classic: yes
 
 - name: Make sure snapd is running
   systemd:
