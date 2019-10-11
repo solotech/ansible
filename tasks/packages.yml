@@ -45,7 +45,7 @@
       - signal-desktop
       - remmina
       
-- name: Install code packages with option --classic
+- name: Install code with option --classic
   snap:
     name: code
     classic: yes
