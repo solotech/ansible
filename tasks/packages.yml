@@ -27,6 +27,7 @@
     - google-chrome-stable
     - gnome-tweak-tool
     - gnome-multi-writer
+    - youtube-dl
     ##- cifs-utils
     ##- gvfs
 
