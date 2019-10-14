@@ -22,6 +22,7 @@
     - mesa-utils
     - tlp
     - steam-installer
+    - evolution
     - google-chrome-stable
     - gnome-tweak-tool
     - gnome-multi-writer
