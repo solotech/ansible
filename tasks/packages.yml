@@ -29,8 +29,6 @@
     - gnome-multi-writer
     - youtube-dl
     - vlc
-    ##- cifs-utils
-    ##- gvfs
 
 - name: Install snap packages
   snap:
