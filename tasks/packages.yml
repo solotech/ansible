@@ -29,13 +29,13 @@
     - gnome-multi-writer
     - youtube-dl
     - vlc
-
+    - keepassxc
+          
 - name: Install snap packages
   snap:
     name:
       - signal-desktop
       - remmina
-      - keepassxc
       - inkscape
       
 - name: Install code with option --classic
