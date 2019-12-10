@@ -37,7 +37,7 @@
       - signal-desktop
       - remmina
       - inkscape
-      - flameshot
+      - flameshot-app
       
 - name: Install code with option --classic
   snap:
