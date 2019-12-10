@@ -30,6 +30,7 @@
     - youtube-dl
     - vlc
     - keepassxc
+    - flameshot
           
 - name: Install snap packages
   snap:
@@ -37,7 +38,6 @@
       - signal-desktop
       - remmina
       - inkscape
-      - flameshot-app
       
 - name: Install code with option --classic
   snap:
