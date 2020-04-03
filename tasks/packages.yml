@@ -31,6 +31,9 @@
     - vlc
     - keepassxc
     - flameshot
+    - wireshark
+    - openvpn
+    - network-manager-openvpn-gnome
           
 - name: Install snap packages
   snap:
