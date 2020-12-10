@@ -9,6 +9,18 @@
     filename: "google-chrome"
     state: present
 
+- name: Add signal key
+  apt_key:
+    url: https://updates.signal.org/desktop/apt/keys.asc
+    state: present
+
+- name: Add signal repo
+  apt_repository:
+    repo: "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main"
+    filename: "signal-xenial"
+    state: present
+
+
 - name: Install apt packages
   apt: 
     name: "{{ packages }}"
@@ -34,11 +46,12 @@
     - wireshark
     - openvpn
     - network-manager-openvpn-gnome
+    - signal-desktop
           
 - name: Install snap packages
   snap:
     name:
-      - signal-desktop
+      #- signal-desktop
       - remmina
       - inkscape
       - drawio
