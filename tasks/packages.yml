@@ -64,10 +64,11 @@
 #       - code
 #       - skype
 
-- name: Install Flatpak packages
-  flatpak:
-    name:
-      - drawio
+# - name: Install Flatpak packages
+#   community.general.flatpak:
+#     name:
+#       - https://dl.flathub.org/repo/appstream/com.jgraph.drawio.desktop.flatpakref
+#     state: present
 
 - name: Make sure snapd is running
   systemd:
