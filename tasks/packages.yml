@@ -47,13 +47,13 @@
     - openvpn
     - network-manager-openvpn-gnome
     - signal-desktop
-    - remmina
+    #- remmina
           
 - name: Install snap packages
   snap:
     name:
       #- signal-desktop
-      #- remmina
+      - remmina
       #- inkscape
       #- drawio
       
