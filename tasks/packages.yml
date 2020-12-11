@@ -47,21 +47,27 @@
     - openvpn
     - network-manager-openvpn-gnome
     - signal-desktop
+    - remmina
           
 - name: Install snap packages
   snap:
     name:
       #- signal-desktop
-      - remmina
-      - inkscape
-      - drawio
+      #- remmina
+      #- inkscape
+      #- drawio
       
-- name: Install code with option --classic
-  snap:
-    classic: yes
+# - name: Install code with option --classic
+#   snap:
+#     classic: yes
+#     name:
+#       - code
+#       - skype
+
+- name: Install Flatpak packages
+  flatpak:
     name:
-      - code
-      - skype
+      - drawio
 
 - name: Make sure snapd is running
   systemd:
